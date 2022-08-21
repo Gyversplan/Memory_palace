@@ -42,11 +42,14 @@ get '/' do
 	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"			
 end
 
-
+	# обработчик get-запроса /new
+	# (браузер получает страницу с сервера)
 get '/new' do
     erb :new
 end
 
+	# обработчик post-запроса /new
+	# (браузер отправляет данные на сервер)
 post '/new' do 
 	
 		# получаем переменную из post-запроса
