@@ -55,5 +55,11 @@ post '/new' do
 		# получаем переменную из post-запроса
 	content = params[:content]
 
+		# предусмотрим ошибку когда пользователь публикует пустой пост
+	if content.length < 1
+			@error = 'Введите текст'
+			return erb :new
+	end
+
 	erb "You typed: ' #{content} '"
 end
