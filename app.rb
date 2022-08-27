@@ -61,7 +61,7 @@ post '/new' do
 			return erb :new
 	end
 
-		# сохраняем в БД публикуемый пост
+		# сохраняем в БД публикуемый пост пользователя
 	@db.execute 'insert into Posts (content, created_date) values (?, datetime())', [content]
 
 	erb "You typed: ' #{content} '"
