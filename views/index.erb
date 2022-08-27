@@ -9,5 +9,8 @@
 		<br>
 		Added at: <%= post['created_date']  %>
 		<hr>
+		<hr>
+			<!-- делаем возможность оставлять комментарий к посту -->
+		<a href="/post/<%= post['id']  %>">Comments</a>
 	</p>
 <% end %>
