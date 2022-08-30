@@ -35,6 +35,15 @@ configure do
 		content TEXT
 	)'
 
+	# создает таблицу если таблицы еще не существует
+	@db.execute 'create table if not exists Comments
+	(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		created_date DATE,
+		content TEXT,
+		post_id integer
+	)'
+
 end
 
 
