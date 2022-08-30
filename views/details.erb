@@ -10,6 +10,21 @@
 <br>
 
 <h4>Comments:</h4>
+<br>
+
+		<!-- выводим результаты комментариев последних постов используя
+		Руби-код <% %> -->
+<% @comments.each do |comment| %>
+	<p>
+		<%= comment['content']  %>
+		<br>
+		<br>
+		<span style="font-size: 75%; color: #999">Added at: <%= comment['created_date']  %></span>
+		<br>
+		<hr />
+	</p>
+<% end %>
+
 
 <p>
 					<!-- Добавляем форму для комментария к Посту а в action 
